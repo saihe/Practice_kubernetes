@@ -33,7 +33,7 @@ kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.
 
 1. ポートフォワード
 
-````sh
+```sh
 kubectl port-forward ingress.networking.k8s.io/ingress 8080:80
 ```
 
@@ -50,4 +50,9 @@ kubectl create ingress demo-localhost --class=nginx --rule="localhost/*=frontend
 ```sh
 kubectl proxy
 ```
-````
+
+1. クラスタ削除
+
+```sh
+kind delete cluster --name practice-kubernetes
+```

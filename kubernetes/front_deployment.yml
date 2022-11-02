@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: frontend-app
   labels:
     app: frontend
 spec:
@@ -14,7 +14,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend
+      - name: frontend-app
         image: frontend:local
         resources:
           limits:
